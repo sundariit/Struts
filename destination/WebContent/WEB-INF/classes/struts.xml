@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+    <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts  
+    Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">  
+    <struts>  
+    
+     	<constant name="struts.enable.DynamicMethodInvocation"
+        value="false" />
+    	<constant name="struts.devMode" value="false" />
+    	<package name="default" extends="struts-default"> 
+    	
+    		<action name="next" class="com.java.action.NewAction1" method = "execute">  
+    		<result name="success">Next.jsp</result>  
+    		</action>  
+    		 
+       		<action name="listdetails" class="com.java.action.PatientRecordAction" method = "listdetails">  
+    		<result name="success">Record.jsp</result>  
+    		</action>  
+    		
+   			<action name="enter" class="com.java.action.NewAction" method = "execute">  
+    		<result name="success">Add.jsp</result>  
+    		</action>  
+    		
+    		<action name="savedetails" class="com.java.action.SaveAction" method = "SaveDetails">  
+   			<result name="success">Success.jsp</result>  
+    		</action>  
+   		 </package>  
+    </struts>      
